@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<h1 class="text-5xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Side Bar Animation</h1>
+<p class="mt-12 text-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">You can click side bar opener to open and close sidebar.</p>
+    
+<div id="sidebar" class="h-screen w-80 m-auto ml-0 flex justify-center items-center -translate-x-64">
+    <ul class="mt-12 h-full w-4/5 flex flex-col justify-start items-center">
+        <li>
+            Dashboard
+        </li>
+        <li>
+            Product
+        </li>
+        <li>
+            Messages
+        </li>
+        <li>
+            Notification
+        </li>
+        <li>
+            People
+        </li>
+        <li>
+            Orders
+        </li>
+    </ul>
+    <div class="h-full w-1/5 bg-white flex justify-center items-end">
+        <img id="opener" class="cursor-pointer" src="opener.png">
+    </div>
+</div>
+
+<script>
+
+let sidebar = document.getElementById("sidebar");
+let opener = document.getElementById("opener");
+
+opener.addEventListener("click", function() {
+opener.classList.toggle("rotate-180")
+sidebar.classList.toggle("translate-x-0");
+sidebar.classList.toggle("-translate-x-64");
+
+
+});
+</script>
+</body>
+</html>
